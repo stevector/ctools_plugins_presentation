@@ -2,8 +2,9 @@
 @import "compass/css3/columns";
 @import "compass/css3/user-interface";
 
-$social-tags: '#io12';
-$brand-small-icon-size: 30px;
+$social-tags: '';
+$brand-small-icon-size: 48px;
+$brand-small-icon-size-width: 158px;
 
 $gray-1: #e6e6e6;
 $gray-2: #a9a9a9;
@@ -174,8 +175,8 @@ slides > slide {
       position: absolute;
       bottom: $slide-top-bottom-padding / 2;
       left: $slide-left-right-padding;
-      background: url(../../images/google_developers_icon_128.png) no-repeat 0 50%;
-      @include background-size($brand-small-icon-size $brand-small-icon-size);
+      background: url(../../images/palantir-logo.png) no-repeat 0 50%;
+      @include background-size($brand-small-icon-size-width $brand-small-icon-size);
       padding-left: $brand-small-icon-size + 10;
       height: $brand-small-icon-size;
       line-height: 1.9;
@@ -193,8 +194,8 @@ slides > slide {
   &.title-slide {
     &:after {
       content: '';
-      background: url(../../images/io2012_logo.png) no-repeat 100% 50%;
-      @include background-size(contain);
+/*      background: url(../../images/io2012_logo.png) no-repeat 100% 50%;
+      @include background-size(contain);  */
       position: absolute;
       bottom: $slide-top-bottom-padding;
       right: $slide-top-bottom-padding;
@@ -911,8 +912,8 @@ aside.gdbar {
   }
 
   img {
-    width: 85px;
-    height: 85px;
+/*    width: 85px;
+    height: 85px; */
     position: absolute;
     right: 0;
     margin: 8px 15px;
@@ -1085,8 +1086,14 @@ aside.gdbar {
 
 @import "zen";
 
-$zen-gutter-width: 20px !default;
+$color-example-a: #FCC;
+$color-example-b: #CFC;
+$color-example-c: #CCF;
+$color-example-d: #FFC;
+$color-example-e: #CFF;
 
+$zen-gutter-width: 20px !default;
+#examples,
 #what-else ul,
 #what-does-sass-do {
   .zen-wrapper {
@@ -1141,11 +1148,110 @@ $zen-gutter-width: 20px !default;
     .col-2 { @include zen-grid-item(4, 4); }
     .col-3 { @include zen-grid-item(3, 8); }
   }
-  
-  
-  
 }
 
+#counting-on-your-keys-right {
+
+  li {
+    text-align: center;
+  }
+  li:nth-child(odd) { background:#f1f1f1 }
+  li:nth-child(even) { background:#d1d1d1 }
+
+  ul:nth-child(1) {
+    $zen-column-count: 10;
+    .col-1 { @include zen-grid-item(1, 1, right); }
+    .col-2 { @include zen-grid-item(1, 2, right); }
+    .col-3 { @include zen-grid-item(1, 3, right); }
+    .col-4 { @include zen-grid-item(1, 4, right); }
+    .col-5 { @include zen-grid-item(1, 5, right); }
+    .col-6 { @include zen-grid-item(1, 6, right); }
+    .col-7 { @include zen-grid-item(1, 7, right); }
+    .col-8 { @include zen-grid-item(1, 8, right); }
+    .col-9 { @include zen-grid-item(1, 9, right); }
+    .col-10 { @include zen-grid-item(1, 10, right); }
+  }
+
+  ul:nth-child(2) {
+    $zen-column-count: 10;
+    @include zen-clear(both);
+    .col-1 { @include zen-grid-item(3, 1, right); }
+    .col-2 { @include zen-grid-item(4, 4, right); }
+    .col-3 { @include zen-grid-item(3, 8, right); }
+  }
+}
+
+#examples {
+  text-align: center;
+}
+
+
+.block-a {
+  background: $color-example-a;
+}
+
+.block-b {
+  background: $color-example-b;
+}
+
+.block-c {
+  background: $color-example-c;
+}
+
+.block-d {
+  background: $color-example-d;
+}
+
+.block-e {
+  background: $color-example-e;
+}
+
+
+
+#example-2 {
+  $zen-column-count: 3; // Set the total number of columns in the grid.
+  $zen-gutter-width: 10px;
+
+  .example-container {
+    @include zen-grid-container; // Apply this mixin to the container.
+  }
+  .block-a {
+    @include zen-grid-item(2, 1);
+  }
+  .block-b {
+    @include zen-grid-item(1, 1, right);
+  }
+  .block-c {
+    @include zen-clear(right);
+    @include zen-grid-item(1, 1, right);
+  }
+  .block-d {
+    @include zen-clear(both);
+    @include zen-grid-item(3, 1);
+  }
+}
+
+#example-3 {
+  $zen-column-count: 6; // Set the total number of columns in the grid.
+  $zen-gutter-width: 10px;
+
+  .example-container {
+    @include zen-grid-container; // Apply this mixin to the container.
+  }
+  .block-a {
+    @include zen-grid-item(3, 3);
+  }
+  .block-b {
+    @include zen-grid-item(2, 1);
+  }
+  .block-c {
+    @include zen-grid-item(1, 1, right);
+  }
+  .block-d {
+    @include zen-clear(right);
+    @include zen-grid-item(1, 1, right);
+  }
+}
 
 
 #what-else ul,
