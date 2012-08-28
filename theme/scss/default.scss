@@ -1112,6 +1112,40 @@ $zen-gutter-width: 20px !default;
   }
 }
 
+#counting-on-your-keys {
+
+  li {
+    text-align: center;
+  }
+  li:nth-child(odd) { background:#f1f1f1 }
+  li:nth-child(even) { background:#d1d1d1 }
+  
+  ul:nth-child(1) {  
+    $zen-column-count: 10;
+    .col-1 { @include zen-grid-item(1, 1); }
+    .col-2 { @include zen-grid-item(1, 2); }
+    .col-3 { @include zen-grid-item(1, 3); }
+    .col-4 { @include zen-grid-item(1, 4); }
+    .col-5 { @include zen-grid-item(1, 5); }
+    .col-6 { @include zen-grid-item(1, 6); }
+    .col-7 { @include zen-grid-item(1, 7); }
+    .col-8 { @include zen-grid-item(1, 8); }
+    .col-9 { @include zen-grid-item(1, 9); }
+    .col-10 { @include zen-grid-item(1, 10); }
+  }
+  
+  ul:nth-child(2) {  
+    $zen-column-count: 10;
+    @include zen-clear();
+    .col-1 { @include zen-grid-item(3, 1); }
+    .col-2 { @include zen-grid-item(4, 4); }
+    .col-3 { @include zen-grid-item(3, 8); }
+  }
+  
+  
+  
+}
+
 
 
 #what-else ul,
