@@ -42,6 +42,111 @@ URL: https://code.google.com/p/io-2012-slides
     </hgroup>
   </slide>
 
+
+  <slide>
+    <hgroup>
+      <h2>Wait, what is "SASS"</h2>
+      <h3>"Sass is a meta-language on top of CSS…"</h3> 
+    </hgroup>
+    <article>
+      <img src="images/sasslogo.gif" alt="SASS Logo" title="SASS Logo" />
+           
+      <footer class="source">source: http://sass-lang.com/about.html</footer>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>What does SASS do?</h2>
+    </hgroup>
+    <article id="what-does-sass-do">
+      <div class="zen-wrapper">
+        <div class="col-1">
+          <h3>SASS</h3>
+          <pre class="prettyprint" data-lang="scss">
+.views-row { 
+   border: 1px solid #ccc;
+   span {
+     color: #400;
+   }
+ }
+          </pre>
+        </div>
+        <div class="col-2">
+          <h3>CSS</h3>
+          <pre class="prettyprint" data-lang="css">
+.views-row {
+   border: 1px solid #ccc;
+ }
+ .views-row span {
+  color: #400;
+}
+          </pre>
+        </div>
+      </div>
+    </article>
+  </slide>
+
+
+  <slide>
+    <hgroup>
+      <h2>What else?</h2>
+    </hgroup>
+    <article id="what-else">
+      <ul class="build">
+        <li class="col-1">Variables<br>
+          <pre class="prettyprint" data-lang="scss">
+$nw-purple : #520063;
+a {
+color: $nw-purple;
+}</pre>
+        </li>
+        <li class="col-2">Mixins (kinda like a function)<br>
+          <pre class="prettyprint" data-lang="scss">
+@mixin left($dist) {
+  float: left;
+  margin-left: $dist;
+}</pre>        
+        </li>
+        <li class="col-1">Selector Inheritance<br>
+<pre class="prettyprint" data-lang="scss">
+.error {
+  border: 1px #f00;
+  background: #fdd;
+}
+.badError {
+  @extend .error;
+  border-width: 3px;
+}</pre>       
+        </li>
+        <li class="col-2">Functions<br>
+<pre class="prettyprint" data-lang="scss">
+.block-b {
+  @include zen-grid-item(1, 1, right);
+}
+.block-c {
+  @include zen-clear(right);
+  @include zen-grid-item(1, 1, right);
+}
+</pre>       
+        </li>
+      </ul>
+      <footer class="source">No time for details here. Go to http://sass-lang.com for more information on the first three.</footer>
+    </article>
+  </slide>
+
+
+
+
+
+
+
+
+
+
+
+
+
   <slide>
     <hgroup>
       <h2>Slide with Bullets</h2>
