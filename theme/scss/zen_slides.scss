@@ -7,23 +7,11 @@ $color-example-d: #FFC;
 $color-example-e: #CFF;
 
 $zen-gutter-width: 20px !default;
-#examples,
+#examples ul,
 #what-else ul,
-#what-does-sass-do {
-  .zen-wrapper {
-      $zen-column-count: 2;
-    .col-1 {
-      @include zen-clear();
-      @include zen-grid-item(1, 1);
-    }
-    .col-2 {
-      @include zen-grid-item(1, 2);
-    }
-  }
-}
-
-#what-else ul {
-    $zen-column-count: 2;
+#what-does-sass-do ul {
+  @include zen-grid-container;
+  $zen-column-count: 2;
   .col-1 {
     @include zen-clear();
     @include zen-grid-item(1, 1);
@@ -31,15 +19,21 @@ $zen-gutter-width: 20px !default;
   .col-2 {
     @include zen-grid-item(1, 2);
   }
+  pre {
+    width: 100%;
+  }
 }
 
+#counting-on-your-keys-right,
 #counting-on-your-keys {
-
   li {
     text-align: center;
   }
   li:nth-child(odd) { background:#f1f1f1 }
   li:nth-child(even) { background:#d1d1d1 }
+}
+
+#counting-on-your-keys {
   
   ul:nth-child(1) {  
     $zen-column-count: 10;
@@ -65,12 +59,6 @@ $zen-gutter-width: 20px !default;
 }
 
 #counting-on-your-keys-right {
-
-  li {
-    text-align: center;
-  }
-  li:nth-child(odd) { background:#f1f1f1 }
-  li:nth-child(even) { background:#d1d1d1 }
 
   ul:nth-child(1) {
     $zen-column-count: 10;
@@ -98,7 +86,6 @@ $zen-gutter-width: 20px !default;
   text-align: center;
 }
 
-
 .block-a {
   background: $color-example-a;
 }
@@ -118,8 +105,6 @@ $zen-gutter-width: 20px !default;
 .block-e {
   background: $color-example-e;
 }
-
-
 
 #example-2 {
   $zen-column-count: 3; // Set the total number of columns in the grid.
@@ -165,14 +150,4 @@ $zen-gutter-width: 20px !default;
     @include zen-grid-item(1, 1, right);
   }
 }
-
-
-#what-else ul,
-.zen-wrapper {
-  pre {
-    width: 100%;
-  }
-}
-
-
 
