@@ -1175,9 +1175,8 @@ $zen-gutter-width: 20px !default;
   ul:nth-child(2) {
     $zen-column-count: 10;
     @include zen-clear(both);
-    .col-1 { @include zen-grid-item(3, 1, right); }
-    .col-2 { @include zen-grid-item(4, 4, right); }
-    .col-3 { @include zen-grid-item(3, 8, right); }
+    .col-1 { @include zen-grid-item(6, 1, right); }
+    .col-2 { @include zen-grid-item(4, 7, right); }
   }
 }
 
