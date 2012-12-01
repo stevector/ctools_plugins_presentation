@@ -782,34 +782,6 @@ class LinkDelete extends Link {</pre>
     </article>
   </slide>
 
-
-
-  <slide>
-    <hgroup>
-      <h2>Namespaces, Annotations, Hooray</h2>
-    </hgroup>
-    <article>
-      <pre class="prettyprint" data-lang="php">
-namespace Drupal\node\Plugin\views\field;
-
-use Drupal\node\Plugin\views\field\Link;
-use Drupal\Core\Annotation\Plugin;
-
-/**
- * Field handler to present a link to delete a node.
- *
- * @ingroup views_field_handlers
- *
- * @Plugin(
- *   id = "node_link_delete",
- *   module = "node"
- * )
- */
-class LinkDelete extends Link {</pre>
-      <footer class="source"><a href="http://drupalcode.org/project/drupal.git/blob/refs/heads/8.x:/core/modules/node/lib/Drupal/node/Plugin/views/field/LinkDelete.php">http://drupalcode.org/project/drupal.git/blob/refs/heads/8.x:/core/modules/node/lib/Drupal/node/Plugin/views/field/LinkDelete.php</a></footer>
-    </article>
-  </slide>
-
   <slide>
     <hgroup>
       <h2>The benefits of extending</h2>
