@@ -717,12 +717,17 @@ function custom_ctools_context_create_entity($empty, $data = NULL, $conf = FALSE
     </hgroup>
     <article class="zen-container">
       <ul>
-        <li>Documentation already written!</li>
-        <li>Multiple Discovery Mechanisms</li>
+        <li>Documentation already written! (And getting editing today)
+          <ul><li><a href="http://drupal.org/node/1637614">http://drupal.org/node/1637614</a></li></ul>
+        </li>
+        <li>PSR-0 classes (that's all over D8)</li>
+        <li>Multiple Discovery Mechanisms<ul>
+            <li>StaticDiscovery</li>
+            <li>HookDiscovery</li>
+            <li>AnnotatedClassDiscovery</li>
+          </ul>
+        </li>
       </ul>
-
-      <p><a href="http://drupal.org/node/1637614">Plugin API in Drupal 8<br>
-        http://drupal.org/node/1637614</a>
     </article>
   </slide>
 
@@ -768,6 +773,62 @@ class LinkDelete extends Link {</pre>
       <footer class="source"><a href="http://drupalcode.org/project/drupal.git/blob/refs/heads/8.x:/core/modules/node/lib/Drupal/node/Plugin/views/field/LinkDelete.php">http://drupalcode.org/project/drupal.git/blob/refs/heads/8.x:/core/modules/node/lib/Drupal/node/Plugin/views/field/LinkDelete.php</a></footer>
     </article>
   </slide>
+
+
+
+  <slide>
+    <hgroup>
+      <h2>Namespaces, Annotations, Hooray</h2>
+    </hgroup>
+    <article>
+      <pre class="prettyprint" data-lang="php">
+namespace Drupal\node\Plugin\views\field;
+
+use Drupal\node\Plugin\views\field\Link;
+use Drupal\Core\Annotation\Plugin;
+
+/**
+ * Field handler to present a link to delete a node.
+ *
+ * @ingroup views_field_handlers
+ *
+ * @Plugin(
+ *   id = "node_link_delete",
+ *   module = "node"
+ * )
+ */
+class LinkDelete extends Link {</pre>
+      <footer class="source"><a href="http://drupalcode.org/project/drupal.git/blob/refs/heads/8.x:/core/modules/node/lib/Drupal/node/Plugin/views/field/LinkDelete.php">http://drupalcode.org/project/drupal.git/blob/refs/heads/8.x:/core/modules/node/lib/Drupal/node/Plugin/views/field/LinkDelete.php</a></footer>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>The benefits of extending</h2>
+    </hgroup>
+    <article>
+      <pre class="prettyprint" data-lang="php">
+class LinkDelete extends Link {
+
+  function render_link($node, $values) {
+    // Ensure user has access to delete this node.
+    if (!node_access('delete', $node)) {
+      return;
+    }
+
+    $this->options['alter']['make_link'] = TRUE;
+    $this->options['alter']['path'] = "node/$node->nid/delete";
+    $this->options['alter']['query'] = drupal_get_destination();
+
+    $text = !empty($this->options['text']) ? $this->options['text'] : t('delete');
+    return $text;
+  }
+}</pre>
+      <footer class="source">Real version: <a href="http://drupalcode.org/project/drupal.git/blob/refs/heads/8.x:/core/modules/node/lib/Drupal/node/Plugin/views/field/LinkDelete.php">http://drupalcode.org/project/drupal.git/blob/refs/heads/8.x:/core/modules/node/lib/Drupal/node/Plugin/views/field/LinkDelete.php</a></footer>
+    </article>
+  </slide>
+
+
 
 
 
