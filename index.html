@@ -1,6 +1,6 @@
 <!--
 
-Zen Grids Presentation by Steve Persch.
+CTools Plugins Presentation by Steve Persch.
 
 ---------------------------------------------
 
@@ -14,7 +14,7 @@ URL: https://code.google.com/p/io-2012-slides
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Zen Grids Introduction</title>
+  <title>CTools Plugins Explained</title>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="chrome=1">
   <!--<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">-->
@@ -41,180 +41,707 @@ URL: https://code.google.com/p/io-2012-slides
     </hgroup>
   </slide>
 
+  <!-- ME -->
   <slide>
     <hgroup>
-      <h2>Managing lots of layouts is hard to do.</h2>
-      <h3>Especially when using leaner markup.</h3>
+      <h2>Steve Persch</h2>
+      <h3>Senior Engineer at Palantir.net</h3>
     </hgroup>
     <article>
-      <img src="images/limitless-layouts.png" alt="grey layout blocks" title="Limitless layouts" />
-      <footer class="source">source: http://zengrids.com</footer>
+      <img src="images/ctools/voyage.png" alt="Palantir.net spaceship" title="Palantir.net spaceship" class="no-border"  />
     </article>
   </slide>
 
-
   <slide>
     <hgroup>
-      <h2>Same markup. Different layouts.</h2>
-      <h3>Responsive design requires this.</h3>
+      <h2>Palantir.net work</h2>
     </hgroup>
-    <article id="examples">
-      <ul class="build">
-        <li class="col-1">
-          <div id="example-2">
-            <h3>One layout for tablets</h3>
-            <div class="example-container">
-              <div class="block block-a">A<br>A<br>A<br>A</div>
-              <div class="block block-b">B<br>B<br>B<br></div>
-              <div class="block block-c">C</div>
-              <div class="block block-d">D<br>D<br>D</div>
-            </div>
-          </div>
-
-        </li>
-        <li class="col-2">
-          <div id="example-3">
-            <h3>One layout for desktop</h3>
-            <div class="example-container">
-              <div class="block block-a">A<br>A<br>A<br>A</div>
-              <div class="block block-b">B<br>B<br>B<br></div>
-              <div class="block block-c">C</div>
-              <div class="block block-d">D<br>D<br>D</div>
-            </div>
-          </div>
-        </div>
-      </li>
-    </article>
-  </slide>
-
-
-  <slide>
-    <hgroup>
-      <h2>Zen Grids uses SASS</h2>
-      <h3>"Sass is a meta-language on top of CSS…"</h3> 
-    </hgroup>
-    <article>
-      <img src="images/sasslogo.gif" alt="SASS Logo" title="SASS Logo" />
-           
-      <footer class="source">source: http://sass-lang.com/about.html</footer>
-    </article>
-  </slide>
-
-
-  <slide>
-    <hgroup>
-      <h2>What does SASS do?</h2>
-    </hgroup>
-    <article id="what-does-sass-do">
-      <ul class="build">
-        <li class="col-1">
-          <h3>SASS (SCSS)</h3>
-          <pre class="prettyprint" data-lang="scss">
-.views-row { 
-   border: 1px solid #ccc;
-   span {
-     color: #400;
-   }
- }
-          </pre>
-        </li>
-        <li class="col-2">
-          <h3>CSS</h3>
-          <pre class="prettyprint" data-lang="css">
-.views-row {
-   border: 1px solid #ccc;
- }
- .views-row span {
-  color: #400;
-}
-          </pre>
-        </li>
+    <article class="zen-container zen-two-col">
+      <div>
+        <h3>Marketplace<br>
+        <img src="images/ctools/marketplace-home.jpg" alt="Marketplace home page" title="Marketplace home page" />
+      </div>
+      <div>
+        <h3>The King Center<br>
+        <img src="images/ctools/kingcenter-home.jpg" alt="The King Center home page" title="The King Center home page" />
       </div>
     </article>
   </slide>
 
-
   <slide>
     <hgroup>
-      <h2>What else?</h2>
+      <h2>Palantir.net work</h2>
     </hgroup>
-    <article id="what-else">
-      <ul class="build">
-        <li class="col-1">Variables<br>
-          <pre class="prettyprint" data-lang="scss">
-$nw-purple : #520063;
-a {
-  color: $nw-purple;
-}</pre>
-        </li>
-        <li class="col-2">Mixins (kinda like a function)<br>
-          <pre class="prettyprint" data-lang="scss">
-@mixin left($dist) {
-  float: left;
-  margin-left: $dist;
-}</pre>        
-        </li>
-        <li class="col-1">Selector Inheritance<br>
-<pre class="prettyprint" data-lang="scss">
-.error {
-  border: 1px #f00;
-  background: #fdd;
-}
-.badError {
-  @extend .error;
-  border-width: 3px;
-}</pre>       
-        </li>
-        <li class="col-2">Functions<br>
-<pre class="prettyprint" data-lang="scss">
-.block-b {
-  @include zen-grid-item(1, 1, right);
-}
-.block-c {
-  @include zen-clear(right);
-  @include zen-grid-item(1, 1, right);
-}
-</pre>       
-        </li>
-      </ul>
-      <footer class="source">No time for details here. Go to http://sass-lang.com for more information on the first three.</footer>
+    <article class="zen-container zen-two-col">
+      <div>
+        <h3>Drupalcon Chicago<br>
+        <img src="images/ctools/drupalcon_chicago.png" alt="Drupalcon Chicago home page" title="Drupalcon Chicago home page" />
+      </div>
+      <div>
+        <h3>Barnard College<br>
+        <img src="images/ctools/barnard.jpg" alt="Barnard home page" title="Barnard College home page" />
+      </div>
     </article>
   </slide>
 
-
-  <slide>
+    <slide>
     <hgroup>
-      <h2>Zen Grids functions in use</h2>
+      <h2>Total Chaos</h2>
+      <h3>Earl Miles (<a href="http://drupal.org/user/26979">merlinofchaos)</h3>
     </hgroup>
     <article>
-      <iframe data-src="http://zengrids.com/help/#examples"></iframe>
+
+      <img src="images/ctools/drupalcon-sunnyvale-2007-earl-miles.jpg" alt="Earl Miles" title="Earl Miles" />
+      
+
+      <footer class="source"><a href="http://buytaert.net/album/drupalcon-sunnyvale-2007/earl-miles">http://buytaert.net/album/drupalcon-sunnyvale-2007/earl-miles</a></footer>
+    </article>
+  </slide>
+
+
+
+
+
+<!-- Introduction
+    A. Who am I.
+        1. Go around the room if number allow. Is there a question you want answered.
+Panels/Page Manager
+Node page example
+What is Page Manager?
+It’s a UI on top of hooks
+
+-->
+
+  <slide>
+    <hgroup>
+      <h2>Panels walk through</h2>
+    </hgroup>
+    <article>
+      <img src="images/ctools/panels-overview.png" alt="Node page config" title="Node page config" />
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Variants</h2>
+      <h3>Set some selection rules. (Probably node type)</h3>
+    </hgroup>
+    <article>
+      <img src="images/ctools/access-plugin-article.png" alt="Access plugin screen" title="Access plugin screen" />
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>More contexts</h2>
+      <h3>Make a relationship to the node author</h3>
+    </hgroup>
+    <article>
+      <img src="images/ctools/contexts.png" alt="Contexts screen" title="Contexts screen" />
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Pick a Layout</h2>
+    </hgroup>
+    <article>
+      <img src="images/ctools/layouts.png" alt="" title="" />
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Put stuff in the layout</h2>
+    </hgroup>
+    <article>
+      <img src="images/ctools/content-types-in-a-layout.png" alt="content type" title="content type" />
+    </article>
+  </slide>
+
+
+<!--  Tasks/Task handlers? Each task handler reports “This is the menu path that I clobber”  -->
+
+  <slide>
+    <hgroup>
+      <h2>Let's get technical</h2>
+    </hgroup>
+    <article>
+      <img src="images/ctools/ctools-plugin-directory.png" alt="CTools directory" title="CTools directory" />
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>What's in a plugin?</h2>
+      <h3>Object oriented concepts, mixed implementation</h3>
+    </hgroup>
+    <article>
+      <pre class="prettyprint" data-lang="php">
+$plugin = array(
+  'title' => t('Simplecontext content type'),
+  'content_types' => 'simplecontext_content_type',
+  // Name of a function which will render the block.
+  'render callback' => 'simplecontext_content_type_render',
+  // Icon goes in the directory with the content type.
+  'icon' => 'icon_example.png',
+  'description' => t('Simplecontext content type - works with a simplecontext context.'),
+  'required context' => new ctools_context_required(t('Simplecontext'), 'simplecontext'),
+  'edit form' => 'simplecontext_content_type_edit_form',
+  'admin title' => 'ctools_plugin_example_simplecontext_content_type_admin_title',
+  // presents a block which is used in the preview of the data.
+  'admin info' => 'ctools_plugin_example_simplecontext_content_type_admin_info',
+  'category' => array(t('CTools Examples'), -9),
+);</pre>
+<footer class="source">Real version at: <a href="http://drupalcode.org/project/ctools.git/blob_plain/refs/heads/7.x-1.x:/ctools_plugin_example/plugins/content_types/simplecontext_content_type.inc">ctools_plugin_example/plugins/content_types/simplecontext_content_type.inc</a></footer>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>BTW, the plugin example module is great.</h2>
+      <h3>And you already have it. It's in CTools.</h3>
+    </hgroup>
+    <article>
+      <img src="images/ctools/ctools_plugin_examples.png" alt="ctools plugin example in netbeans" title="ctools plugin example in netbeans" />
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Configure your plugin</h2>
+      <h3>There's a form for this somewhere...</h3>
+    </hgroup>
+    <article>
+      <img src="images/ctools/content-type-node-title.png" alt="node title pane config screen" title="node title pane config screen" />
     </article>
   </slide>
 
 
   <slide>
     <hgroup>
-      <h2>Counting on your keys</h2>
+      <h2>Just like working with Form API</h2>
+      <h3>Something's missing...</h3>
     </hgroup>
-    <article id="counting-on-your-keys">
+    <article>
+      <pre class="prettyprint" data-lang="php">
+function ctools_node_title_content_type_edit_form($form, &$form_state) {
+  $conf = $form_state['conf'];
+
+  $form['link'] = array(
+    '#title' => t('Link to node'),
+    '#type' => 'checkbox',
+    '#default_value' => $conf['link'],
+    '#description' => t('Check here to make the title link to the node.'),
+  );
+  return $form;
+}</pre>
+     <footer class="source"><a href="http://drupalcode.org/project/ctools.git/blob/refs/heads/7.x-1.x:/plugins/content_types/node_context/node_title.inc">http://drupalcode.org/project/ctools.git/blob/refs/heads/7.x-1.x:/plugins/content_types/node_context/node_title.inc</a></footer>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Help from CTools</h2>
+    </hgroup>
+    <article>
+      <img src="images/ctools/content-type-node-title--skitch.jpg" alt="node title pane config screen, skitched" title="node title pane config screen, skitched" />
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Oh, and don't forget the submit function</h2>
+    </hgroup>
+    <article>
+      <pre class="prettyprint" data-lang="php">
+function ctools_node_title_content_type_edit_form_submit($form, &$form_state) {
+  // Copy everything from our defaults.
+  foreach (array_keys($form_state['plugin']['defaults']) as $key) {
+    $form_state['conf'][$key] = $form_state['values'][$key];
+  }
+}</pre>
+      <footer class="source"><a href="http://drupalcode.org/project/ctools.git/blob/refs/heads/7.x-1.x:/plugins/content_types/node_context/node_title.inc">http://drupalcode.org/project/ctools.git/blob/refs/heads/7.x-1.x:/plugins/content_types/node_context/node_title.inc</a></footer>
+    </article>
+  </slide>
+
+
+  <slide>
+    <hgroup>
+      <h2>And the admin summary</h2>
+    </hgroup>
+    <article>
+      <img src="images/ctools/access-plugin-article.png" alt="node type admin summary" title="node type admin summary" />
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Just return a string</h2>
+    </hgroup>
+    <article>
+      <pre class="prettyprint" data-lang="php">
+function abbreviated_ctools_node_type_ctools_access_summary($conf, $context) {
+  if (!isset($conf['type'])) {
+    $conf['type'] = array();
+  }
+  $types = node_type_get_types();
+  $names = array();
+
+  foreach (array_filter($conf['type']) as $type) {
+    if (!empty($types[$type])) {
+      $names[] = check_plain($types[$type]->name);
+    }
+  }
+
+  return t('@identifier is any node type', array('@identifier' => $context->identifier));
+}</pre>
+      <footer class="source">Real version at: <a href="http://drupalcode.org/project/ctools.git/blob/refs/heads/7.x-1.x:/plugins/access/node_type.inc">http://drupalcode.org/project/ctools.git/blob/refs/heads/7.x-1.x:/plugins/access/node_type.inc</a></footer>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>So... Where do I debug?</h2>
+    </hgroup>
+    <article>
+      <pre class="prettyprint" data-lang="php">
+$plugin = array(
+  'title' => t('Simplecontext content type'),
+  'content_types' => 'simplecontext_content_type',
+  // Name of a function which will render the block.
+  'render callback' => 'simplecontext_content_type_render',
+  // Icon goes in the directory with the content type.
+  'icon' => 'icon_example.png',
+  'description' => t('Simplecontext content type - works with a simplecontext context.'),
+  'required context' => new ctools_context_required(t('Simplecontext'), 'simplecontext'),
+  'edit form' => 'simplecontext_content_type_edit_form',
+  'admin title' => 'ctools_plugin_example_simplecontext_content_type_admin_title',
+  // presents a block which is used in the preview of the data.
+  'admin info' => 'ctools_plugin_example_simplecontext_content_type_admin_info',
+  'category' => array(t('CTools Examples'), -9),
+);</pre>
+<footer class="source">Real version at: <a href="http://drupalcode.org/project/ctools.git/blob_plain/refs/heads/7.x-1.x:/ctools_plugin_example/plugins/content_types/simplecontext_content_type.inc">ctools_plugin_example/plugins/content_types/simplecontext_content_type.inc</a></footer>
+    </article>
+  </slide>
+
+
+
+  <!-- Arguments -->
+  <slide>
+    <hgroup>
+      <h2>Argument Plugins</h2>
+    </hgroup>
+    <article>
+      <img src="images/ctools/argument-setup.png" alt="Argument Plugins" title="Argument Plugins" />
+    </article>
+  </slide>
+  <slide>
+    <hgroup>
+      <h2>Argument Plugins</h2>
+      <h3>Pass a string to a function</h3>
+    </hgroup>
+    <article>
+      <pre class="prettyprint" data-lang="php">
+function abbreviated_ctools_argument_nid_context($arg = NULL, $conf = NULL, $empty = FALSE) {
+
+  $node = node_load($arg);
+  if (!$node) {
+    return FALSE;
+  }
+
+  return ctools_context_create('node', $node);
+}</pre>
+      <footer class="source">Real version at: <a href="http://drupalcode.org/project/ctools.git/blob/refs/heads/7.x-1.x:/plugins/arguments/nid.inc">plugins/arguments/nid.inc</a></footer>
+    </article>
+  </slide>
+
+  <!-- Context -->
+  <slide>
+    <hgroup>
+      <h2>Context Plugins</h2>
+    </hgroup>
+    <article>
+      <img src="images/ctools/contexts.png" alt="Contexts screen" title="Contexts screen" />
+    </article>
+  </slide>
+  <slide>
+    <hgroup>
+      <h2>Context Plugins</h2>
+      <h3>A wrapper around a variable</h3>
+    </hgroup>
+    <article>
+      <pre class="prettyprint" data-lang="php">function abbreviated_ctools_context_create_node($empty, $data = NULL, $conf = FALSE) {
+  $context = new ctools_context('node');
+  $context->plugin = 'node';
+
+  $nid = $data['nid'];
+  $data = node_load($nid);
+
+  $context->data     = $data;
+  $context->title    = $data->title;
+  $context->argument = $data->nid;
+  $context->restrictions['type'] = array($data->type);
+  return $context;
+}</pre>
+      <footer class="source">Real version at: <a href="">http://drupalcode.org/project/ctools.git/blob/refs/heads/7.x-1.x:/plugins/contexts/node.inc</a></footer>
+    </article>
+  </slide>
+
+  <!-- Access -->
+  <slide>
+    <hgroup>
+      <h2>Access Plugins</h2>
+    </hgroup>
+    <article>
+      <img src="images/ctools/access-plugin-article.png" alt="Access plugin screen" title="Access plugin screen" />
+    </article>
+  </slide>
+  <slide>
+    <hgroup>
+      <h2>Access Plugins</h2>
+      <h3>TRUE or FALSE</h3>
+    </hgroup>
+    <article>
+      <pre class="prettyprint" data-lang="php">
+function abbreviated_ctools_node_access_ctools_access_check($conf, $context) {
+  list($user_context, $node_context) = $context;
+
+  if ($conf['type'] == 'create') {
+    return node_access('create', $node_context->data->type, $user_context->data);
+  }
+  else {
+    return node_access($conf['type'], $node_context->data, $user_context->data);
+  }
+}
+      </pre>
+      <footer class="source">Real version at: <a href="http://drupalcode.org/project/ctools.git/blob/refs/heads/7.x-1.x:/plugins/access/node_access.inc">plugins/access/node_access.inc</a></footer>
+    </article>
+  </slide>
+
+  <!-- Relationships -->
+  <slide>
+    <hgroup>
+      <h2>Relationship Plugins</h2>
+    </hgroup>
+    <article>
+      <img src="images/ctools/contexts.png" alt="Contexts screen" title="Contexts screen" />
+    </article>
+  </slide>
+  <slide>
+    <hgroup>
+      <h2>Relationship Plugins</h2>
+      <h3>From one context to another</h3>
+    </hgroup>
+    <article>
+      <pre class="prettyprint" data-lang="php">
+function abbreviated_ctools_user_from_node_context($context, $conf) {
+
+  $uid = $context->data->uid;
+  $account = user_load($uid);
+  return ctools_context_create('user', $account);
+}
+      </pre>
+      <footer class="source">Real version at: <a href="http://drupalcode.org/project/ctools.git/blob/refs/heads/7.x-1.x:/plugins/relationships/user_from_node.inc">plugins/relationships/user_from_node.inc</a></footer>
+    </article>
+  </slide>
+
+  <!-- Layout -->
+  <slide>
+    <hgroup>
+      <h2>Layout Plugins</h2>
+    </hgroup>
+    <article>
+      <img src="images/ctools/layouts.png" alt="" title="" />
+    </article>
+  </slide>
+  <slide>
+    <hgroup>
+      <h2>Layout Plugins</h2>
+      <h3>A plugin type from Panels</h3>
+    </hgroup>
+    <article>
+      <pre class="prettyprint" data-lang="php">
+// Plugin definition
+$plugin = array(
+  'title' => t('Two column'),
+  'category' => t('Columns: 2'),
+  'icon' => 'twocol.png',
+  'theme' => 'panels_twocol',
+  'css' => 'twocol.css',
+  'regions' => array(
+    'left' => t('Left side'),
+    'right' => t('Right side')
+  ),
+);
+      </pre>
+      <footer class="source">Real version at: <a href="http://drupalcode.org/project/panels.git/blob/refs/heads/7.x-3.x:/plugins/layouts/twocol/twocol.inc">panels/plugins/layouts/twocol/twocol.inc</a></footer>
+    </article>
+  </slide>
+
+  <!-- Content type -->
+  <slide>
+    <hgroup>
+      <h2>Content Type Plugins</h2>
+      <h3>No, the other kind of "content type"</h3>
+    </hgroup>
+    <article>
+      <img src="images/ctools/content-type-browser.png" alt="content type" title="content type" />
+    </article>
+  </slide>
+  <slide>
+    <hgroup>
+      <h2>Content Type Plugins</h2>
+      <h3>No, the other kind of "content type"</h3>
+    </hgroup>
+    <article>
+      <pre class="prettyprint" data-lang="php">
+function abbreviated_ctools_node_title_content_type_render($subtype, $conf, $panel_args, $context) {
+  if (empty($context) || empty($context->data)) {
+    return;
+  }
+
+  // Get a shortcut to the node.
+  $node = $context->data;
+
+  // Build the content type block.
+  $block = new stdClass();
+  $block->content = check_plain($node->title);
+  return $block;
+}
+      </pre>
+      <footer class="source">Real version at: <a href="http://drupalcode.org/project/ctools.git/blob/refs/heads/7.x-1.x:/plugins/content_types/node_context/node_title.inc">plugins/content_types/node_context/node_title.inc</a></footer>
+    </article>
+  </slide>
+
+
+
+
+
+  <!-- MORE FUN  -->
+
+
+  <!-- Restrictions 
+  <slide>
+    <hgroup>
+      <h2>Restrictions</h2>
+      <h3>Sometimes limitations are a good thing.</h3>
+    </hgroup>
+    <article>
+      <pre class="prettyprint" data-lang="php">
+// CODE GOES HERE
+      </pre>
+      <footer class="source">path: <a href="">.inc</a></footer>
+    </article>
+  </slide> -->
+
+  <!-- Child plugins -->
+  <slide>
+    <hgroup>
+      <h2>Child plugins</h2>
+      <h3>Here's where the foreach {} goes</h3>
+    </hgroup>
+    <article>
+      <pre class="prettyprint" data-lang="php">
+function abbreviated_ctools_entity_bundle_ctools_access_get_children($plugin, $parent) {
+  $entities = entity_get_info();
+  foreach ($entities as $entity_type => $entity) {
+    $plugin['title'] = t('@entity: Bundle', array('@entity' => $entity['label']));
+    $plugin['name'] = $parent . ':' . $entity_type;
+    $plugin['required context'] = new ctools_context_required(t(ucfirst($entity_type)), $entity_type);
+    $plugins[$parent . ':' . $entity_type] = $plugin;
+  }
+  return $plugins;
+}</pre>
+      <footer class="source">Real version at: <a href="http://drupalcode.org/project/ctools.git/blob/refs/heads/7.x-1.x:/plugins/access/entity_bundle.inc">plugins/access/entity_bundle.inc</a></footer>
+    </article>
+  </slide>
+
+  <!-- Write your own -->
+    <!-- @TODO, THE HOOKS THAT YOU NEED
+    INFO FILES
+    -->
+
+<!--   ----  MINI PANELS   -->
+
+  <slide>
+    <hgroup>
+      <h2>Mini Panels as a "content type"</h2>
+    </hgroup>
+    <article>
+      <img src="images/ctools/mini-panels-content-types.png" alt="Mini Panels" title="Mini Panels" />
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Mini Panels and Export UI</h2>
+    </hgroup>
+    <article>
+      <img src="images/ctools/mini-panels-export-ui.png" alt="Mini Panels" title="Mini Panels" />
+    </article>
+  </slide>
+
+
+  <slide>
+    <hgroup>
+      <h2>One module, two plugin types</h2>
+    </hgroup>
+    <article>
+      <img src="images/ctools/panels-mini-directory.png" alt="Mini Panels" title="Mini Panels" />
+    </article>
+  </slide>
+
+  <!-- Altering plugins -->
+  <slide>
+    <hgroup>
+      <h2>Export UI: Slightly different file structure</h2>
+      <h3>One file to the info array, One for a class</h3>
+    </hgroup>
+    <article>
+      <pre class="prettyprint" data-lang="php">
+class panels_mini_ui extends ctools_export_ui {
+  function init($plugin) {
+    parent::init($plugin);
+    ctools_include('context');
+  }
+
+  function list_form(&$form, &$form_state) {
+      </pre>
+      <footer class="source">Full version at: <a href="http://drupalcode.org/project/panels.git/blob/refs/heads/7.x-3.x:/panels_mini/plugins/export_ui/panels_mini_ui.class.php">http://drupalcode.org/project/panels.git/blob/refs/heads/7.x-3.x:/panels_mini/plugins/export_ui/panels_mini_ui.class.php</a></footer>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>What's the point?</h2>
+    </hgroup>
+    <article>
+      <img src="images/ctools/panels_mini_table.png" alt="Panels Mini table" title="Panels Mini table" />
+      <br>
+      <img src="images/ctools/panels-mini-features.png" alt="Panels Mini Features" title="Panels Mini Features" />
+    </article>
+  </slide>
+
+
+  <slide>
+    <hgroup>
+      <h2>Custom Access Rulesets and Export UI</h2>
+    </hgroup>
+    <article>
+      <img src="images/ctools/export-ui--access-rulesets.png" alt="Custom Access Rulesets" title="Custom Access Rulesets" />
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Views Panes</h2>
+      <h3>No Pun Intended</h3>
+    </hgroup>
+    <article>
+      <img src="images/ctools/views-pane-display-plugin-config.png" alt="Views Pane Display Plugin config form" title="Views Pane Display Plugin config form" />
+    </article>
+  </slide>
+
+
+  <slide>
+    <hgroup>
+      <h2>Views Panes on the Panels side</h2>
+      <h3></h3>
+    </hgroup>
+    <article>
+      <img src="images/ctools/views-pane-content-type-config.png" alt="Views Panes Content Type Config form" title="Views Panes Content Type Config form" />
+    </article>
+  </slide>
+
+
+
+
+
+  <slide>
+    <hgroup>
+      <h2>Writing your own plugins</h2>
+    </hgroup>
+    <article>
       <ul>
-        <li class="col-1">1</li>
-        <li class="col-2">2</li>
-        <li class="col-3">3</li>
-        <li class="col-4">4</li>
-        <li class="col-5">5</li>
-        <li class="col-6">6</li>
-        <li class="col-7">7</li>
-        <li class="col-8">8</li>
-        <li class="col-9">9</li>
-        <li class="col-10">10</li>              
+        <li><a href="http://drupal.org/project/plugin_stub">Drush: http://drupal.org/project/plugin_stub</a>
+          <br>Only supports some plugins types so far.
+        </li>
+        <li>Copy/paste/edit</li>
+        <li>Write from scratch</li>
+    </article>
+  </slide>
+
+  <!-- Altering plugins -->
+  <slide>
+    <hgroup>
+      <h2>Altering Plugins</h2>
+      <h3>There's an alter hook for everything</h3>
+    </hgroup>
+    <article>
+      <pre class="prettyprint" data-lang="php">
+function custom_ctools_plugin_post_alter(&$plugin, &$info) {
+
+  // Override two plugin functions.
+  if ($plugin['content types'] === 'fieldable_panels_panes_fieldable_panels_pane_content_type_content_types') {
+    $plugin['content types'] = 'custom_fieldable_panels_pane_content_type_content_types';
+  }
+
+  if ($plugin['context'] === 'ctools_context_create_entity') {
+    $plugin['context'] = 'custom_ctools_context_create_entity';
+  }
+}
+      </pre>
+      <footer class="source">Release pending for real version of this module</footer>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Altered Function</h2>
+    </hgroup>
+    <article>
+      <pre class="prettyprint" data-lang="php">
+function custom_ctools_context_create_entity($empty, $data = NULL, $conf = FALSE, $plugin) {
+
+  // Call the normal function. Then modify the result.
+  $context = ctools_context_create_entity($empty, $data, $conf, $plugin);
+  $context->restrictions['custom_restriction'] = custom_build_restriction($context->data->nid);
+  return $context;
+}</pre>
+      <footer class="source">Release pending for real version of this module</footer>
+    </article>
+  </slide>
+
+  <!-- Drupal 8 -->
+  <slide>
+    <hgroup>
+      <h2>Drupal 8</h2>
+      <h3>It gets better</h3>
+    </hgroup>
+    <article class="zen-container">
+      <ul>
+        <li>Documentation already written!</li>
+        <li>Multiple Discovery Mechanisms</li>
       </ul>
-      
-      <ul class="build">
-        <li class="col-1">1<br><code>zen-grid-item(3, 1);</code><br>3 units wide.<br>Starting on position 1</li>
-        <li class="col-2">2<br><code>zen-grid-item(4, 4);</code><br>4 units wide.<br>Starting on position 4</li>
-        <li class="col-3">3<br><code>zen-grid-item(3, 8);</code><br>3 units wide.<br>Starting on position 8</li>
-      </ul>      
+
+      <p><a href="http://drupal.org/node/1637614">Plugin API in Drupal 8<br>
+        http://drupal.org/node/1637614</a>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Drupal 8 Views Plugins</h2>
+      <h3>This looks familiar...</h3>
+    </hgroup>
+    <article class="zen-container zen-two-col">
+      <div>
+         <img src="images/ctools/block-plugins.png" alt="Block Plugins" title="Block Plugins" />
+      </div>
+      <div>
+         <img src="images/ctools/views-plugins.png" alt="Views Plugins" title="Views Plugins" />
+      </div>
 
     </article>
   </slide>
@@ -222,44 +749,52 @@ a {
 
   <slide>
     <hgroup>
-      <h2>And from the right</h2>
+      <h2>Namespaces, Annotations, Hooray</h2>
     </hgroup>
-    <article id="counting-on-your-keys-right">
-      <ul>
-        <li class="col-1">1</li>
-        <li class="col-2">2</li>
-        <li class="col-3">3</li>
-        <li class="col-4">4</li>
-        <li class="col-5">5</li>
-        <li class="col-6">6</li>
-        <li class="col-7">7</li>
-        <li class="col-8">8</li>
-        <li class="col-9">9</li>
-        <li class="col-10">10</li>              
-      </ul>
-      
-      <ul class="build">
-        <li class="col-1">1<br><code>zen-grid-item(6, 1, right);</code><br>6 units wide.<br>Starting on position 1.</li>
-        <li class="col-2">2<br><code>zen-grid-item(4, 7, right);</code><br>4 units wide.<br>Starting on position 7.</li>
-      </ul>      
+    <article>
+      <pre class="prettyprint" data-lang="php">
+namespace Drupal\node\Plugin\views\field;
 
+use Drupal\node\Plugin\views\field\Link;
+use Drupal\Core\Annotation\Plugin;
+
+/**
+ * Field handler to present a link to delete a node.
+ *
+ * @ingroup views_field_handlers
+ *
+ * @Plugin(
+ *   id = "node_link_delete",
+ *   module = "node"
+ * )
+ */
+class LinkDelete extends Link {</pre>
+      <footer class="source"><a href="http://drupalcode.org/project/drupal.git/blob/refs/heads/8.x:/core/modules/node/lib/Drupal/node/Plugin/views/field/LinkDelete.php">http://drupalcode.org/project/drupal.git/blob/refs/heads/8.x:/core/modules/node/lib/Drupal/node/Plugin/views/field/LinkDelete.php</a></footer>
     </article>
   </slide>
+
+
+
 
 
   <slide class="thank-you-slide segue nobackground">
     <aside class="gdbar right"><img src="images/palantir-logo.png"></aside>
     <article class="flexbox vleft auto-fadein">
       <h2>Thanks!</h2>
-      <p><a href="http://zengrids.com">zengrids.com</a> for more information.</p>
-      <p>Zen Grids was created by John Albin Wilkins a senior engineer at Palantir.net.
-      John also maintains the <a href="http://drupal.org/project/zen">Zen theme on Drupal.org.</a></p>
+      <h3>More info at:</h3>
+      <ul>
+        <li><a href="http://drupal.org/project/ctools">CTools Module: http://drupal.org/project/ctools</a></li>
+        <li><a href="http://drupalcode.org/project/ctools.git/tree/refs/heads/7.x-1.x:/ctools_plugin_example">Ctools Plugin Example (inside CTools)</a></li>
+        <li><a href="http://drupal.org/node/1637614">Drupal 8 Plugin docs: http://drupal.org/node/1637614</a></li>
+      </ul>
+
+    
+    <p class="auto-fadein" data-config-contact>
+      <!-- populated from slide_config.json -->
+    </p>
+
     </article>
 
-    <!--
-    <p class="auto-fadein" data-config-contact>
-      <!-- populated from slide_config.json -- >
-    </p>-->
   </slide>
 
 

@@ -1,9 +1,9 @@
 
 
-<h1><img src="images/io2012_logo.png">Zen Grids: A brief introduction</h1>
+<h1>CTools Plugins Explained</h1>
 
-This is a presentation on [Zen Grids](http://zengrids.com) given at
-the Chicago Advanced Drupal User Group by [Steve Persch](http://drupal.org/user/179805).
+This is a presentation on [CTools Plugins](http://drupal.org/project/ctools) given at
+DrupalCamp Ohio by [Steve Persch](http://drupal.org/user/179805).
 
 [Chicago Advanced Drupal User Group](http://groups.drupal.org/node/246698)
 

@@ -297,6 +297,10 @@ slides.layout-faux-widescreen {
   }
 }
 
+img {
+  border: 2px #ccc solid;
+}
+
 b {
   font-weight: 600;
 }
@@ -336,6 +340,7 @@ ul {
 
   li {
     margin-bottom: 0.5em;
+    list-style: disc;
 
     ul {
       margin-left: 2em;
@@ -1081,4 +1086,36 @@ aside.gdbar {
   pre, code {
     font-family: monospace !important;
   }
+}
+
+
+
+@import "zen";
+
+.zen-container {
+ @include zen-grid-container; // Apply this mixin to the container.
+
+ img {
+   max-width: 100%;
+ }
+
+}
+
+.zen-two-col {
+  $zen-column-count: 2;
+  > *:nth-child(odd) {
+    @include zen-clear();
+    @include zen-grid-item(1, 1);
+  }
+
+  > *:nth-child(even) {
+    @include zen-grid-item(1, 2);
+  }
+}
+
+
+
+aside.gdbar img,
+img.no-border {
+  border: none;
 }

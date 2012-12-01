@@ -1,8 +1,8 @@
 var SLIDE_CONFIG = {
   // Slide settings
   settings: {
-    title: 'Zen Grids: <br>A brief introduction',
-    subtitle: 'Chicago Advanced Drupal User Group. Aug 28th, 2012',
+    title: 'CTools Plugins Explained',
+    subtitle: 'DrupalCamp Ohio. Dec 1st, 2012',
     useBuilds: true, // Default: true. False will turn off slide animation builds.
     usePrettify: true, // Default: true
     enableSlideAreas: true, // Default: true. False turns off the click areas on either slide of the slides.
@@ -19,11 +19,10 @@ var SLIDE_CONFIG = {
   // Author information
   presenters: [{
     name: 'Steve Persch',
-    company: 'Engineer, Palantir.net',
-//    gplus: 'http://plus.google.com/1234567890',
-    twitter: '@stevector',
+    company: 'Senior Engineer, Palantir.net',
+    twitter: '@stevector'
+
 //    www: 'http://www.you.com',
-    github: 'https://github.com/stevector'
   }/*, {
     name: 'Second Name',
     company: 'Job Title, Google',
