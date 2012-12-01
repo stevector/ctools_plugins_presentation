@@ -651,9 +651,6 @@ class panels_mini_ui extends ctools_export_ui {
   </slide>
 
 
-
-
-
   <slide>
     <hgroup>
       <h2>Writing your own plugins</h2>
@@ -665,6 +662,17 @@ class panels_mini_ui extends ctools_export_ui {
         </li>
         <li>Copy/paste/edit</li>
         <li>Write from scratch</li>
+        <li>Include the module hook</li>
+        </ul>
+      <pre class="prettyprint" data-lang="php">
+function ctools_access_ruleset_ctools_plugin_directory($module, $plugin) {
+  // Most of this module is implemented as an export ui plugin, and the
+  // rest is in ctools/includes/ctools_access_ruleset.inc
+  if ($module == 'ctools' && ($plugin == 'export_ui' || $plugin == 'access')) {
+    return 'plugins/' . $plugin;
+  }
+}</pre>
+      <footer class="source"><a href="http://drupalcode.org/project/ctools.git/blob/refs/heads/7.x-1.x:/ctools_access_ruleset/ctools_access_ruleset.module">http://drupalcode.org/project/ctools.git/blob/refs/heads/7.x-1.x:/ctools_access_ruleset/ctools_access_ruleset.module</a></footer>
     </article>
   </slide>
 
@@ -829,11 +837,6 @@ class LinkDelete extends Link {
   </slide>
 
 
-
-
-
-
-
   <slide class="thank-you-slide segue nobackground">
     <aside class="gdbar right"><img src="images/palantir-logo.png"></aside>
     <article class="flexbox vleft auto-fadein">
@@ -849,14 +852,11 @@ class LinkDelete extends Link {
     <p class="auto-fadein" data-config-contact>
       <!-- populated from slide_config.json -->
     </p>
-
     </article>
-
   </slide>
 
 
   <slide class="backdrop"></slide>
-
 </slides>
 
 
